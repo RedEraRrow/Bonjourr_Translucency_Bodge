@@ -283,32 +283,6 @@
 
 		<div id="background-wrapper" class="hidden" data-type="images" data-texture="none">
 			<div id="background-media"></div>
-			<script>
-				window.requestAnimationFrame(() => {
-					document.addEventListener("DOMContentLoaded", () => {
-						const alignBackground = () => {
-							const screenW = screen.width;
-							const screenH = screen.height;
-							const offsetX = window.screenX + 221;
-							const offsetY = window.screenY + 8;
-							console.log("Align script running")
-							const bg = document.getElementById("background-media");
-							if (bg) {
-							bg.style.setProperty("background-attachment", "fixed", "important");
-							bg.style.setProperty("background-repeat", "no-repeat", "important");
-							bg.style.setProperty("background-size", `${screenW}px ${screenH}px`, "important");
-							bg.style.setProperty("background-position", `-${offsetX}px -${offsetY}px`, "important");
-							bg.style.setProperty("transition", "none", "important");
-							bg.style.setProperty("pointer-events", "none", "important");
-							bg.style.setProperty("z-index", "-1", "important");
-							}
-							requestAnimationFrame(alignBackground);
-						};
-
-						alignBackground();
-						});
-				});
-			</script>
 			<div id="background-color"></div>
 			<div id="background-texture"></div>
 		</div>
